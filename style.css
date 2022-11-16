@@ -1,0 +1,103 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    background-color: rgb(46, 16, 73);
+}
+
+nav {
+    border: 2px dashed blue;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* wszystkie tagi a mające nava jako przodka */
+nav a {
+    color: white;
+    border: 2 px dashed blue;
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+
+}
+
+nav a h1 {
+    border:2px dashed red;
+    padding: 0px;
+    margin: 0px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border: 2px dashed green;
+    
+    
+    /* position: absolute */
+    /* włściowści hambu */
+    position: absolute;
+    width: 40vw;
+    right:calc(-40vw - 2 px);
+    right: 0;
+    top: 100%;
+    transition: .5s;
+    
+    
+}
+
+nav ul li {
+    border: : 2px dashed black;
+    /* y x  */
+    /* top right bottom left */
+/* pierwsz góra doł druga prawo lewo */
+    margin: 5px 10px;
+
+}
+/* hamburger elements */
+nav label {
+    border: 2px dashed blue;
+    width: 1,5em;
+    height: 1,5em;
+    margin-right: 5px;
+    position: relative;
+
+}
+nav label div {
+    cursor: pointer;
+    border: 3px solid red;
+    background-color: black;
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    transition: .5s;
+
+}
+nav label div:nth-child(2) {
+    top:calc( 50% - 1.5px)
+}
+
+nav label div:nth-child(1) {
+    top: calc( 25% - 1.5px )
+
+}
+
+nav label div:nth-child(3) {
+    bottom: 0;
+}
+#toggler {
+    display: none;
+}
+#toggler:checked ~ ul {
+    border: 2px dashed green;
+    right: 0;
+}
+#toggler: :checked ~ label div:nth-child(2){
+    opacity: 0;
+}
+#toggler: :checked ~ label div:nth-child(1){
+    trans
+    
+}
+footer {border: 2px blue;}
