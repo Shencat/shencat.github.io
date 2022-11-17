@@ -1,24 +1,33 @@
 *{
     box-sizing: border-box;
 }
+
+/* jeśli się coś rozjeżdża box sizing */
+
+
 body {
     background-color: rgb(46, 16, 73);
+   /* usuń domyślny margine body */
+    margin: 0;
 }
 
 nav {
     border: 2px dashed blue;
     display: flex;
     justify-content: space-between;
+    /* przestrzeń pomiędzy dziećmi na osi x */
+    align-items: center;
+    /* ustaawia dziec na środku osi Y */
+    position: sticky;
+    /* sticky przykleja do ekranu jeśli ma spełniony warunek */
+    top:0;
+    padding: 0 10px;
 }
 
 /* wszystkie tagi a mające nava jako przodka */
 nav a {
-    color: white;
+    color: black;
     border: 2 px dashed blue;
-    display: flex;
-    justify-content: space-between;
-    position: sticky;
-    top: 0;
 
 }
 
@@ -29,63 +38,78 @@ nav a h1 {
 }
 
 nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    
+    margin: 10px;
+    /* przestrzeń wokół granic elementy */
+    padding: 5px 10 px;
+    /* przestrzeń między borderem a treścą */
     border: 2px dashed green;
     
     
-    /* position: absolute */
-    /* włściowści hambu */
-    position: absolute;
+  
+    /* właściowści hambu */
+    position: fixed; /* przykleja się na stałe do ekranu */
     width: 40vw;
     right:calc(-40vw - 2 px);
-    right: 0;
-    top: 100%;
+
+    /*top: 100%; */
+    top:calc( 2em + 10px );
+    height: calc( 100vw -( 2em + 10px ));
     transition: .5s;
-    
     
 }
 
 nav ul li {
-    border: : 2px dashed black;
+    border: 2px dashed black;
     /* y x  */
     /* top right bottom left */
 /* pierwsz góra doł druga prawo lewo */
     margin: 5px 10px;
+    padding: 10px;
+
 
 }
 /* hamburger elements */
 nav label {
-    border: 2px dashed blue;
-    width: 1,5em;
-    height: 1,5em;
-    margin-right: 5px;
+    border: 2px dashed black;
+    width: 2em;
+    height: 2em;
+    margin: 5px;
     position: relative;
+    /* relative */
+    cursor: pointer;
 
 }
+/* style dla wszytskich kresek w harmbu wszystkie współne */
 nav label div {
-    cursor: pointer;
-    border: 3px solid red;
+    
+    height: 3px;
+    border-radius: 3px solid red;
     background-color: black;
     position: absolute;
+    /* dostosowuje się do przodka */
     width: 80%;
+    /* szerokośc na 80 % rodzica */
     left: 10%;
+    /* odsuwamy o 10% szerokości rodzica */
     transition: .5s;
+    /* jeśli się będzie zmieniał, to niech trwa to pół sekundy */
 
 }
-nav label div:nth-child(2) {
-    top:calc( 50% - 1.5px)
-}
-
 nav label div:nth-child(1) {
-    top: calc( 25% - 1.5px )
+    top:calc( 25% - 1.5px)
+}
+
+nav label div:nth-child(2) {
+    top: calc( 50% - 1.5px )
+    /* środek na środek rodzica na osi y */
 
 }
 
 nav label div:nth-child(3) {
-    bottom: 0;
+    top: calc( 75% - 1.5 px);
 }
+/* jeśli odnośimy się w HTML ID w CSS # */
 #toggler {
     display: none;
 }
@@ -93,11 +117,36 @@ nav label div:nth-child(3) {
     border: 2px dashed green;
     right: 0;
 }
-#toggler: :checked ~ label div:nth-child(2){
-    opacity: 0;
+#toggler:checked ~ label div:nth-child(2){
+    transform: rotate(45deg);
+    top: calc( 50% - 1.5 px)
 }
-#toggler: :checked ~ label div:nth-child(1){
-    trans
+#toggler:checked ~ label div:nth-child(1){
+    opacity: 0;
     
 }
-footer {border: 2px blue;}
+#toggler :checked ~ label div:nth-child(3)
+
+
+footer {border: 2px blue;
+}
+
+@media { 
+    min-width: 768px }
+
+
+nav label {
+    display: none;
+}
+
+nav ul {
+    position: static;
+    width: unset;
+    height: unset;
+}
+
+
+
+
+
+/* końcówka kursu z 16.11 była o aktualizacji plików na GitHubie  i coś a source control [nav ul fixed]*/
