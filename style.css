@@ -131,8 +131,9 @@ nav label div:nth-child(3) {
 footer {border: 2px blue;
 }
 
-@media { 
-    min-width: 768px }
+@media  ( min-width: 768px ) { 
+
+}
 
 
 nav label {
@@ -147,6 +148,3 @@ nav ul {
 
 
 
-
-
-/* końcówka kursu z 16.11 była o aktualizacji plików na GitHubie  i coś a source control [nav ul fixed]*/
