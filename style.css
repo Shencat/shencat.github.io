@@ -128,6 +128,58 @@ nav label div:nth-child(3) {
 #toggler :checked ~ label div:nth-child(3)
 
 
+/* wszystkie wymienione elementy */
+h2,h3,h4,p {
+    margin: 0;
+
+}
+
+
+.carousel-section {
+    border: 2px dashed red;
+
+}
+
+.carousel-section > header {
+    border: 2px dashed green;
+    padding: .75rem 1rem;
+
+}
+
+
+.carousel-outer {
+    border: 2px orange;
+}
+ 
+.carousel-inner {
+    border: 5px dashed pink;
+}
+
+.carousel-inner article  {
+    display: none;
+    border: 2 px dashed yellow
+}
+
+.active {
+    display: block;
+}
+.carousel-inner article header {
+    border: 5 px dashed blueviolet;
+    padding: .5rem 075rem;
+}
+
+.carousel-inner article.content img {
+    border: 5 px dashed blue
+}
+
+
+
+
+
+
+
+
+
 footer {border: 2px blue;
 }
 
