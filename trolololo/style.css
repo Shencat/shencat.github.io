@@ -5,4 +5,29 @@
     Justify-content:space-evenly;
     padding: 20px;
     text-align: center;
+    font-style: italic;
+    font-stretch: extra-expanded;
+    font-size: 45px;
+}
+
+#foot{
+    align-items: flex-end;
+    padding: 20px;
+}
+
+#nav{
+    align-items: flex-start;
+    padding: 20px;
+}
+
+#keks{
+    text-align: left;
+    padding: 20px;
+    justify-content: space-around;
+}
+
+#sesk{
+    text-align: right;
+    padding: 20px;
+    justify-content: space-around;
 }
