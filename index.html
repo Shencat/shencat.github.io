@@ -7,6 +7,12 @@
   <title>Wizytówka</title>
   <!-- link - implementacja stylu z zewnętrzengo pliku -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- google Fonts pobrane z https://fonts.google.com/specimen/Ubuntu -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+
 </head>
 <body>
 
@@ -18,8 +24,10 @@
       <!-- najważniejszy nagłówek na stronie -->
       <h1>akaminska</h1> 
     </a>
-<!-- input wlwmwnet klikalny przetrzymuje stan rozsuwanego menu -->
+<!-- input el. klikalny przetrzymuje stan rozsuwanego menu ( klik,otw,odklik- zawarte)-->
     <input type="checkbox" id= toggler>
+
+    <!-- zwykly htmlowy element przejmujacy działanie od toggler -->
     <label for="toggler">
       <div></div>
       <div></div>
@@ -34,35 +42,87 @@
       <li>Kontakt</li>
     </ul>
   </nav> 
+<!-- tematycznie zgrupowany content -->
+  <section class="carousel-section">
 
-  <section>
-    <Header>
+    <!-- sekcja nagłowkowa całego section -->
+    <header>
       
+      <!-- tytuł -->
         <h2>Lorem</h2>
+
+        <!-- opis -->
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
         Eius repellendus numquam sit adipisci dolore pariatur! 
       </p>
-    </Header>
+    </header>
+
+    <!-- rodzic całej karuzeli i przycisków -->
+    <div class="carousel-outer">
+      <button class="left">&leftarrow;</button>
+
+      <!-- element zawierający wszystkie slajdy -->
+      <div class="carousel-inner">
+
+        <!-- active wyświetla element na stronie -->
+        <article class="active">
+
+          <!-- sekcja nagłówkowa -->
+          <header>
+            <!-- tytuł -->
+            <h3>Lorem 1</h3>
+            <!-- opis 3 -->
+            <p> Lorem srorem</p>
+
+
+          </header>
+
+          <!-- rodzic img -->
+    
+
     <div class="content">
-      <img src="https:/"
-      alt="Lorem photo">
+      <!-- w srcpodajemy ścieżkę względną względem pliku w którym się znajdujemy 
+        lb ścieżkę bezwględną jeśli pobieramy z neta
+       -->
+      <img src="/img.office.webp" alt="lorem photo">
     </div>
+    
+  </article>
 
-    <div class="carousel outer">
-      
+        <!-- elementy nie są widoczne bez klasy active -->
+        
+      <article>
+        <header>
+          <h3>Lorem 2</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse expedita consequatur iure iste magni aut
 
+          </p>
+        </header>
+        <div class="content">
+          <img src="hacker.webp" alt="Lorem photo">
+
+
+        </div>
+      </article>
+        <header>
+          <h3> Lorem 3</h3>
+          <p>
+            Lorem trololo
+          </p>
+
+        </header>
+        <div class="content">
+          <img src="/img/code.webp" alt="Lorem photo">
+        </div>
+      </article>
+    <div>
+
+      <button class="right">&RightArrow;</button>
     </div>
-      
-
-      
-
 
 
   </section>
-
-  <a href="#">AA</a>
-
 
 
 <footer>

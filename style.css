@@ -1,3 +1,14 @@
+:root{
+    --background-color: #101F61;
+    --foreground-color: #1D38AD;
+    --shadow-color: #505363;
+    --font-color: #000;
+    --font-light-color: #fff;
+
+    --shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px insert;
+}
+/* * - selektor ten bierze pod uwage całą strone. A ty o nim zapomniałaś */
+
 *{
     box-sizing: border-box;
 }
@@ -6,12 +17,15 @@
 
 
 body {
+    font-family: 'Ubuntu', sans-serif;
     background-color: rgb(46, 16, 73);
    /* usuń domyślny margine body */
     margin: 0;
 }
 
 nav {
+    background-color: var(--foreground-color);
+    box-shadow: var(--shadow);
     border: 2px dashed blue;
     display: flex;
     justify-content: space-between;
@@ -22,28 +36,28 @@ nav {
     /* sticky przykleja do ekranu jeśli ma spełniony warunek */
     top:0;
     padding: 0 10px;
+    z-index: 1;
 }
 
 /* wszystkie tagi a mające nava jako przodka */
 nav a {
-    color: black;
-    border: 2 px dashed blue;
+    color: var(--font-light-color);
+    text-decoration: none;
 
 }
 
 nav a h1 {
-    border:2px dashed red;
     padding: 0px;
     margin: 0px;
 }
 
 nav ul {
-    
-    margin: 10px;
+    margin: 0px;
     /* przestrzeń wokół granic elementy */
-    padding: 5px 10 px;
+    padding: 10 px;
     /* przestrzeń między borderem a treścą */
-    border: 2px dashed green;
+    background-color: var(--shadow-color);
+    list-style: none;
     
     
   
@@ -60,21 +74,22 @@ nav ul {
 }
 
 nav ul li {
-    border: 2px dashed black;
+    color: var(--font-light-color);
     /* y x  */
     /* top right bottom left */
 /* pierwsz góra doł druga prawo lewo */
-    margin: 5px 10px;
-    padding: 10px;
-
+    margin: 10px;
+    padding: 5px 10px;
+    text-align: right;
 
 }
 /* hamburger elements */
 nav label {
-    border: 2px dashed black;
+    border: 2px solid var(--font-light-color);
+    border-radius: 5px;
     width: 2em;
     height: 2em;
-    margin: 5px;
+    margin: 10px 0;
     position: relative;
     /* relative */
     cursor: pointer;
@@ -84,15 +99,15 @@ nav label {
 nav label div {
     
     height: 3px;
-    border-radius: 3px solid red;
-    background-color: black;
+    border-radius: 3px;
+    background-color: var(--font-light-color);
     position: absolute;
     /* dostosowuje się do przodka */
     width: 80%;
     /* szerokośc na 80 % rodzica */
     left: 10%;
     /* odsuwamy o 10% szerokości rodzica */
-    transition: .5s;
+    transition: .3s;
     /* jeśli się będzie zmieniał, to niech trwa to pół sekundy */
 
 }
@@ -114,18 +129,20 @@ nav label div:nth-child(3) {
     display: none;
 }
 #toggler:checked ~ ul {
-    border: 2px dashed green;
     right: 0;
 }
-#toggler:checked ~ label div:nth-child(2){
+#toggler:checked ~ label div:nth-child(1){
     transform: rotate(45deg);
     top: calc( 50% - 1.5 px)
 }
-#toggler:checked ~ label div:nth-child(1){
+#toggler:checked ~ label div:nth-child(2){
     opacity: 0;
     
 }
-#toggler :checked ~ label div:nth-child(3)
+#toggler :checked ~ label div:nth-child(3){
+    transform: rotate(135deg);
+    top: calc( 50% - 1.5 px)
+}
 
 
 /* wszystkie wymienione elementy */
@@ -136,40 +153,65 @@ h2,h3,h4,p {
 
 
 .carousel-section {
-    border: 2px dashed red;
-
+    color: var(--font-light-color);
+    background-color: var(--shadow-color);
+    margin: 1rem;
+    border-radius: 7px;
+    padding-bottom: 1px;
 }
 
 .carousel-section > header {
-    border: 2px dashed green;
     padding: .75rem 1rem;
 
 }
 
 
 .carousel-outer {
-    border: 2px orange;
+    background-color: var(--font-color);
+    position: relative;
+    border-radius: 7px;
+    margin: 1rem;
 }
  
-.carousel-inner {
-    border: 5px dashed pink;
+.carousel-outer button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 3rem;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 20%;
+    transition: .3s;
+}
+
+.left{
+    left: 0;
+}
+
+.right{
+    right: 0;
 }
 
 .carousel-inner article  {
     display: none;
-    border: 2 px dashed yellow
+    padding-bottom: 2rem;
 }
 
-.active {
+.carousel-inner article.active {
     display: block;
 }
 .carousel-inner article header {
-    border: 5 px dashed blueviolet;
-    padding: .5rem 075rem;
+    padding: 1.25rem 1rem;
 }
 
-.carousel-inner article.content img {
-    border: 5 px dashed blue
+.carousel-inner article .content{
+    display: flex;
+    justify-content: center;
+}
+
+.carousel-inner article .content img{
+    max-width: 100%;
 }
 
 
