@@ -1,0 +1,39 @@
+button{
+    width: 600px;
+    height: 150px;
+    color:white;
+    background-color: red;
+    font-family: fantasy;
+    font-size: 40px;
+}
+
+*{
+    background-color: rgb(18, 196, 196);
+    font-size: 20px;
+    font-family: cursive;
+    text-align: center;
+}
+
+#ad{
+    text-align: left;
+    width: 100px;
+    height: 500px;
+}
+
+img{
+    text-align: center;
+    width: 100px;
+
+}
+
+
+table{
+    border: 5px, solid, rgb(221, 11, 64);
+}
+
+h1{
+    font-size: 100px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color:purple;
+    font-display: flex;
+}
