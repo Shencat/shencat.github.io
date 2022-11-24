@@ -37,3 +37,15 @@ lastElementChild;
 previousActiveElement.classList.add('active')
 
 })
+
+document.addEventListener ('click', event => { 
+  const toggler = document.querySelector("#toggler")
+  const menu = document.querySelector("#menu")
+  const label = document.querySelector("#label")
+  && !event.composedPath.includes(menu)
+  toggler.checked = false
+})
+
+
+
+

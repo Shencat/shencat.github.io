@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="eng">
 <head>
+
+</head>
     <body>
 
-        <table border="1">
+        <table border:="1">
             <thead>
             <tr>
                 <th>lp</th>
@@ -26,4 +28,6 @@
             
 
                 </tr>
+                
+        <body>
                 
