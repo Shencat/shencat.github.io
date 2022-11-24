@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <body>
+
+        <table border="1">
+            <thead>
+            <tr>
+                <th>lp</th>
+                <th>Imię</th>
+                <th>Wiek</th>
+            
+
+                </tr>
+                tr>
+                <th>1</th>
+                <th>Jan</th>
+                <th>18</th>
+            
+
+                </tr>
+                tr>
+                <th>2</th>
+                <th>Ewa</th>
+                <th>23</th>
+            
+
+                </tr>
+                
